@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#010402">
+<title>Propose Already</title>
+<meta name="description" content="Time left to propose to me. No extensions. No PTO. No 'I'll do it in Q1.'">
+
+<!-- Open Graph / Facebook / iMessage / IG -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://proposealready.com/">
+<meta property="og:title" content="Propose Already">
+<meta property="og:description" content="Time left to propose to me. No extensions. No PTO. No 'I'll do it in Q1.'">
+<meta property="og:image" content="https://proposealready.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://proposealready.com/">
+<meta name="twitter:title" content="Propose Already">
+<meta name="twitter:description" content="Time left to propose to me. No extensions. No PTO. No 'I'll do it in Q1.'">
+<meta name="twitter:image" content="https://proposealready.com/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #010402;
+    --green: #3dff6e;
+    --green-dim: #1e8f3d;
+    --green-faint: #0b3318;
+    --amber: #ffb000;
+    --red: #ff2b2b;
+    --ember: #ff7a1a;
+    --ember-dim: #a8500f;
+    --panel-border: rgba(255,122,26,0.22);
+    --glow: 0 0 6px rgba(61,255,110,0.85), 0 0 18px rgba(61,255,110,0.5), 0 0 40px rgba(61,255,110,0.25);
+  }
+
+  html{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  *{ box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html,body{
+    margin:0; padding:0;
+    background: var(--bg);
+    color: #e8e6df;
+    height:100%;
+    overflow-x:hidden;
+    overscroll-behavior: none;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  /* CRT scanline + flicker overlay */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.0) 0px,
+      rgba(0,0,0,0.0) 2px,
+      rgba(0,0,0,0.18) 3px,
+      rgba(0,0,0,0.0) 4px
+    );
+    z-index: 50;
+    mix-blend-mode: multiply;
+  }
+  body::after{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%);
+    z-index: 51;
+  }
+
+  @keyframes flicker{
+    0%, 96%, 100% { opacity: 1; }
+    97% { opacity: 0.82; }
+    98% { opacity: 0.94; }
+    99% { opacity: 0.7; }
+  }
+
+  .crt-flicker{ animation: flicker 6s infinite; }
+
+  .wrap{
+    position:relative;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: clamp(28px, 8vw, 48px) max(20px, env(safe-area-inset-left)) clamp(40px, 10vw, 80px) max(20px, env(safe-area-inset-right));
+    z-index: 2;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @keyframes pulse{
+    0%,100%{ opacity:1; }
+    50%{ opacity:0.25; }
+  }
+
+  /* ---- headline ---- */
+  h1{
+    font-family: 'Press Start 2P', monospace;
+    text-align: center;
+    font-size: clamp(12px, 1.8vw, 16px);
+    line-height: 1.9;
+    letter-spacing: 1px;
+    color: #b3b3b3;
+    margin: 0 0 36px;
+    text-transform: uppercase;
+  }
+
+  /* ---- countdown ---- */
+  .countdown{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    flex-wrap: nowrap;
+    gap: clamp(4px, 1.6vw, 14px);
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .unit{
+    background: linear-gradient(180deg, #061006, #010401);
+    border: 1px solid var(--green-faint);
+    border-radius: 4px;
+    padding: clamp(6px, 1.4vw, 16px) clamp(3px, 1vw, 10px) clamp(8px, 1.6vw, 16px);
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 200px;
+    text-align:center;
+    box-shadow: inset 0 0 30px rgba(61,255,110,0.06), 0 0 24px rgba(61,255,110,0.08);
+  }
+
+  .unit .num{
+    font-family: 'VT323', monospace;
+    font-size: clamp(26px, 11vw, 130px);
+    line-height: 1;
+    color: var(--green);
+    text-shadow: var(--glow);
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .unit .label{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: clamp(8px, 1.6vw, 14px);
+    letter-spacing: clamp(1px, 0.4vw, 4px);
+    color: var(--green-dim);
+    margin-top: clamp(3px, 1vw, 8px);
+    white-space: nowrap;
+  }
+
+  .sep{
+    font-family: 'VT323', monospace;
+    font-size: clamp(20px, 9vw, 110px);
+    color: var(--green-dim);
+    align-self: center;
+    padding-bottom: clamp(10px, 2.6vw, 28px);
+    opacity: 0.7;
+    flex: 0 0 auto;
+  }
+
+  .critical .num{ color: var(--red) !important; text-shadow: 0 0 8px rgba(255,43,43,0.9), 0 0 26px rgba(255,43,43,0.5) !important; }
+  .critical .label{ color: var(--red) !important; }
+  .critical{ border-color: rgba(255,43,43,0.35) !important; animation: pulse 1s infinite; }
+
+  .subline{
+    font-family: 'Press Start 2P', monospace;
+    text-align:center;
+    font-size: clamp(12px, 1.8vw, 16px);
+    color: #b3b3b3;
+    letter-spacing: 1px;
+    margin: 36px 0 50px;
+    text-transform: uppercase;
+  }
+
+  /* ---- terminal log ---- */
+  .terminal{
+    background: #010301;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 4px;
+    padding: 18px 20px;
+    height: 168px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 40px rgba(255,255,255,0.03);
+  }
+
+  .terminal .title{
+    position:absolute;
+    top: -11px;
+    left: 16px;
+    background: var(--bg);
+    padding: 0 8px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b3b3b3;
+  }
+
+  .log{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .log .line{ opacity: 0; animation: fadeIn 0.25s forwards; color: #ffffff; }
+
+  @keyframes fadeIn{
+    from{ opacity:0; transform: translateY(3px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+
+  .cursor{
+    display:inline-block;
+    width: 9px; height: 15px;
+    background: var(--green);
+    box-shadow: var(--glow);
+    animation: blink 1s steps(1) infinite;
+    vertical-align: -2px;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  footer{
+    text-align:center;
+    margin-top: 40px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #4a4842;
+
+  @media (max-width: 560px){
+    .terminal{ height: 168px; padding: 14px 14px; }
+    .log{ font-size: 12px; line-height: 1.65; }
+  }
+</style>
+</head>
+<body class="crt-flicker">
+<div class="wrap">
+
+  <h1>Time left to propose to me</h1>
+
+  <div class="countdown" id="countdown">
+    <div class="unit"><div class="num" id="d">00</div><div class="label">DAYS</div></div>
+    <div class="sep">:</div>
+    <div class="unit"><div class="num" id="h">00</div><div class="label">HOURS</div></div>
+    <div class="sep">:</div>
+    <div class="unit"><div class="num" id="m">00</div><div class="label">MINS</div></div>
+    <div class="sep">:</div>
+    <div class="unit"><div class="num" id="s">00</div><div class="label">SECS</div></div>
+  </div>
+
+  <div class="subline" id="subline">or else &lt;3</div>
+
+  <div class="terminal">
+    <div class="title">BOOT LOG — proposal-pipeline</div>
+    <div class="log" id="log"></div>
+  </div>
+
+</div>
+
+<script>
+/* ---------------- COUNTDOWN ---------------- */
+const target = new Date("2026-12-31T23:59:59");
+
+function pad(n){ return String(Math.max(n,0)).padStart(2,'0'); }
+
+function tick(){
+  const now = new Date();
+  let diff = target - now;
+  if(diff < 0) diff = 0;
+
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff / (1000*60*60)) % 24);
+  const mins = Math.floor((diff / (1000*60)) % 60);
+  const secs = Math.floor((diff / 1000) % 60);
+
+  document.getElementById('d').textContent = pad(days);
+  document.getElementById('h').textContent = pad(hours);
+  document.getElementById('m').textContent = pad(mins);
+  document.getElementById('s').textContent = pad(secs);
+
+  const countdownEl = document.getElementById('countdown');
+  if(days <= 14){
+    countdownEl.classList.add('critical');
+  }
+}
+tick();
+setInterval(tick, 1000);
+
+/* ---------------- FAKE BOOT LOG ---------------- */
+const lines = [
+  ["git clone proposal-plan.git", "dim"],
+  ["Initializing engagement_era.exe ...", "ok"],
+  ["Loading module: commitment.dll", "ok"],
+  ["npm install patience --save", "ok"],
+  ["Requesting permission: mom, John, Max, and Robert", "ok"],
+  ["Response: REJECTED — not passionate enough", "fail"],
+  ["Resubmitting with +200% more passion", "warn"],
+  ["Response: REJECTED — try again", "fail"],
+  ["Response: APPROVED (finally)", "ok"],
+  ["Location scan: excluding all bodies of water", "ok"],
+  ["Beach proposal idea — VETOED", "fail"],
+  ["Lake proposal idea — VETOED", "fail"],
+  ["Infinity pool proposal idea — VETOED", "fail"],
+  ["Dry land confirmed. Proceeding.", "ok"],
+  ["Searching: elongated cushion cut", "ok"],
+  ["Result: brilliant cut — REJECTED (wrong shape)", "fail"],
+  ["Result: round cut — REJECTED (wrong shape)", "fail"],
+  ["Match found: elongated cushion, old mine cut, 4.0ct", "ok"],
+  ["Checking inventory: diamonds (0 found)", "fail"],
+  ["Retrying vendor connection... jeweler-api.local", "dim"],
+  ["Ring shopping in progress...", "ok"],
+  ["Ring idea v1 — REJECTED (too small)", "fail"],
+  ["Ring idea v2 — under review", "warn"],
+  ["Ring idea v3 — approved by best friend Thuy", "ok"],
+  ["Ring purchase in progress...", "ok"],
+  ["Ring purchase: payment pending", "warn"],
+  ["Ring pickup needed — status: NOT STARTED", "fail"],
+  ["Building: proposal_speech.md", "ok"],
+  ["Draft 1 of proposal_speech.md ... too generic", "fail"],
+  ["Draft 14 of proposal_speech.md ... getting there", "warn"],
+  ["Rehearsing speech in bathroom mirror", "dim"],
+  ["Compiling: courage.exe", "ok"],
+  ["courage.exe build FAILED — insufficient nerve", "fail"],
+  ["Recompiling courage.exe with --extra-motivation", "ok"],
+  ["Pinging: best friend Thuy for a size hint", "ok"],
+  ["Response received: 'ask her mom instead'", "dim"],
+  ["Meme scan: searching for maximum dank", "ok"],
+  ["Comedic timing: calibrating", "warn"],
+  ["Meme rating: certified dank", "ok"],
+  ["Scheduling: 'totally random' dinner reservation", "ok"],
+  ["Reservation confirmed: candlelit, corner table", "ok"],
+  ["Syncing calendar with photographer (hidden)", "ok"],
+  ["Encrypting: secret_plan.txt", "ok"],
+  ["Access denied: she must not see this file", "warn"],
+  ["Clearing cache: overthinking.tmp", "ok"],
+  ["Deleting: cold_feet.bak", "ok"],
+  ["Merge conflict: cold-feet vs true-love", "fail"],
+  ["Conflict resolved in favor of true-love", "ok"],
+  ["Running tests: does-she-say-yes.test.js", "ok"],
+  ["Test suite: 1 passed, 0 failed (obviously)", "ok"],
+  ["Deploying to production: down-on-one-knee", "warn"],
+  ["Deployment paused — awaiting final nerve check", "fail"],
+  ["Escalating priority: URGENT", "warn"],
+  ["Status: LOADING... LOADING... LOADING...", "dim"],
+  ["404: excuse not found", "fail"],
+  ["Warning: procrastination.exe still running in background", "warn"],
+  ["Killing process: procrastination.exe", "ok"],
+  ["Version bump: boyfriend v1.0 → fiancé v1.0", "ok"],
+  ["Checking system clock against deadline...", "dim"],
+  ["WARNING: time_remaining approaching zero", "fail"],
+  ["Committing to main branch: forever", "ok"],
+  ["git push origin forever --force", "ok"],
+  ["Build stable. Awaiting launch window: Dec 31.", "ok"],
+];
+
+const logEl = document.getElementById('log');
+const MAX_LINES = 5;
+let i = 0;
+
+function pushLine(){
+  const [text, type] = lines[i % lines.length];
+  const el = document.createElement('div');
+  el.className = 'line ' + type;
+  const tag = type === 'ok' ? '[ OK ]' : type === 'warn' ? '[WARN]' : type === 'fail' ? '[FAIL]' : '[ .. ]';
+  el.textContent = tag + '  ' + text;
+  logEl.appendChild(el);
+
+  while(logEl.children.length > MAX_LINES){
+    logEl.removeChild(logEl.firstChild);
+  }
+
+  i++;
+}
+
+// seed a few lines immediately so it doesn't look empty on load
+for(let k=0; k<6; k++) pushLine();
+
+setInterval(pushLine, 500);
+</script>
+</body>
+</html>
