@@ -218,7 +218,7 @@ const EVENTS = [
    note:'Probably not the vibe'},
   {date:'2026-12-24', start:'2026-12-23', hold:'2026-12-30', end:'2026-12-31', title:'Post-Christmas hangover', add:-14, hidden:true, nodamp:true},
   {date:'2026-10-03', title:'Steady climb', level:97, ramp:88, lin:true, hidden:true},
-  {date:'2026-12-30', when:'Dec 31', title:'NYE aka our first date anniversary', level:100, ramp:1, lin:true,
+  {date:'2026-12-30', when:'Dec 31', title:'NYE aka our first date anniversary', level:99, ramp:1, lin:true,
    note:'Renting out a bar. Makes sense (but would be annoying).'}
 ];
 /* ================================================== */
@@ -282,7 +282,7 @@ function odds(ms,live){
   if(l<=0.01)return Math.max(0,Math.min(100,l));
   if(l>=99.5)return Math.min(100,l);
   const sc=Math.max(0,Math.min(1,l/25,(100-l)/12));
-  return Math.max(0,Math.min(99.5,l+(weekday(ms)*(1-sw(ms))+noise(ms)*(live?1:0.8))*sc));
+  return Math.max(0,Math.min(99,l+(weekday(ms)*(1-sw(ms))+noise(ms)*(live?1:0.8))*sc));
 }
 (function(){
   let prev=0;
@@ -300,7 +300,7 @@ for(let ms=NOW;ms<END;ms+=DAY/4) proj.push({ms,v:odds(ms,false)});
 proj.push({ms:END,v:odds(END,false)});
 // blend the start of the projection into the live line so there is no jump
 const gap=past[past.length-1].v-proj[0].v;
-proj.forEach((p,i)=>{p.v=Math.max(0,Math.min(100,p.v+gap*Math.max(0,1-i/48)));});
+proj.forEach((p,i)=>{p.v=Math.max(0,Math.min(99,p.v+gap*Math.max(0,1-i/48)));});
 
 /* ---------- helpers ---------- */
 const $=s=>document.querySelector(s);
