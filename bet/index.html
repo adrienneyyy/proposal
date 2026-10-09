@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>When will Andre propose?</title>
+<meta name="description" content="Odds of when Andre will propose to Adrienne. Make your guess.">
+<link rel="canonical" href="https://proposealready.com/bet">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://proposealready.com/bet">
+<meta property="og:title" content="When will Andre propose?">
+<meta property="og:description" content="Odds of when Andre will propose to Adrienne. Make your guess.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#1d1b22; --muted:#7b7784; --grid:#ece9ef; --line:#2e9beb; --spk:#0fbf6a; --dip:#ee1689;
+  --pill:#c4306a; --pillbg:#fbe9f0; --up:#0f9f73; --down:#ee1689; --card:#f7f4f8; --bar:#f1c5d6;
+  --disp:'Bricolage Grotesque','Avenir Next','Trebuchet MS',system-ui,sans-serif;
+  --body:'Figtree','Avenir Next',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#17141b; --ink:#f4f1f6; --muted:#a39dad; --grid:#2a2631; --line:#7cc8ff; --spk:#3dff8f; --dip:#ff3da5;
+    --pill:#ff7fae; --pillbg:#34202b; --up:#3fd6a3; --down:#ff3da5; --card:#211d27; --bar:#5a2a40;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#17141b; --ink:#f4f1f6; --muted:#a39dad; --grid:#2a2631; --line:#7cc8ff; --spk:#3dff8f; --dip:#ff3da5;
+  --pill:#ff7fae; --pillbg:#34202b; --up:#3fd6a3; --down:#ff3da5; --card:#211d27; --bar:#5a2a40;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:22px 18px 64px}
+.head{display:flex;gap:14px;align-items:center}
+.badge{flex:none;width:52px;height:52px;border-radius:50%;background:var(--pillbg);display:grid;place-items:center;font-size:28px}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(22px,5.6vw,30px);line-height:1.1;margin:0;letter-spacing:-.01em}
+.brand{margin-left:auto;font-family:var(--disp);font-weight:800;color:var(--up);font-size:18px;letter-spacing:-.01em}
+.sub{margin:10px 0 0;color:var(--muted);font-size:14px}
+.big{position:relative;display:flex;align-items:baseline;flex-wrap:nowrap;gap:6px 10px;margin-top:22px;height:68px}
+.num{font-family:var(--disp);font-weight:800;font-size:clamp(52px,15vw,72px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.num sup{font-size:.5em;font-weight:700;vertical-align:baseline;margin-left:2px}
+.chance{color:var(--muted);font-weight:500}
+.delta{display:block;height:24px;line-height:24px;margin-top:4px;font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.flat{color:var(--muted)}
+.reset{font:600 13px var(--body);color:var(--pill);background:var(--pillbg);border:0;border-radius:999px;padding:5px 12px;cursor:pointer;position:absolute;right:0;top:22px}
+.reset[hidden]{display:none}
+.reset:focus-visible{outline:2px solid var(--pill);outline-offset:2px}
+.chartbox{position:relative;margin-top:10px}
+svg{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.ax{font:500 12px var(--body);fill:var(--muted)}
+.gridl{stroke:var(--grid);stroke-width:1;stroke-dasharray:2 4}
+.main{fill:none;stroke:var(--line);stroke-width:2.25;stroke-linejoin:round;stroke-linecap:round}
+.proj{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:3 6;stroke-linecap:round;opacity:0;transition:opacity .8s ease}
+.proj.on{opacity:.55}
+.head-dot{fill:var(--line)}
+.head-halo{fill:var(--line);opacity:.18}
+.dotg{cursor:pointer;outline:none}
+.dotg .core{fill:var(--bg);stroke:var(--line);stroke-width:2.5}
+.dotg.neg .core{stroke:var(--ink)}
+.dotg .halo{fill:var(--line);opacity:0}
+.dotg.sel .halo{opacity:.2;animation:pulse 1.6s ease-out infinite}
+.dotg:focus-visible .core{stroke-width:4}
+.dotg{transform-box:fill-box;transform-origin:center}
+.dotg.pop{animation:pop .4s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes pulse{0%{transform:scale(.7);opacity:.35}100%{transform:scale(1.7);opacity:0}}
+.halo{transform-box:fill-box;transform-origin:center}
+.cross{stroke:var(--muted);stroke-width:1;opacity:0}
+.scrubdot{fill:var(--line);stroke:var(--bg);stroke-width:2;opacity:0}
+.pills{display:flex;gap:6px;justify-content:center;margin:14px 0 4px}
+.pills button{font:600 14px var(--body);color:var(--pill);background:transparent;border:0;padding:7px 14px;border-radius:999px;cursor:pointer}
+.pills button[aria-pressed="true"]{background:var(--pill);color:#fff}
+.pills button:focus-visible,.lock:focus-visible,.evrow:focus-visible{outline:2px solid var(--pill);outline-offset:2px}
+.why{background:var(--card);border-radius:14px;padding:14px 16px;margin-top:12px;min-height:88px}
+.why .t{font-family:var(--disp);font-weight:700;font-size:18px;line-height:1.2;margin:0}
+.why .m{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:4px}
+.why .pts{font-weight:700}
+.why .pts.up{color:var(--up)} .why .pts.down{color:var(--down)}
+.why p{margin:6px 0 0}
+.why .hint{margin:0;color:var(--muted)}
+.chip{margin:14px 2px 0;font-size:13px;line-height:1.5;color:var(--muted)}
+h2{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:-.01em;margin:44px 0 6px}
+.lead{margin:0 0 14px;color:var(--muted);font-size:15px}
+.evlist{list-style:none;margin:0;padding:0}
+.evrow{display:flex;width:100%;gap:12px;align-items:baseline;text-align:left;font:inherit;color:inherit;background:none;border:0;border-top:1px solid var(--grid);padding:12px 2px;cursor:pointer}
+.evrow .d{flex:none;width:76px;color:var(--muted);font-size:14px}
+.evrow .tt{flex:1}
+.evrow .pp{font-weight:700;font-variant-numeric:tabular-nums}
+.evrow .pp.up{color:var(--up)} .evrow .pp.down{color:var(--down)}
+.evrow.sel .tt{font-weight:600}
+.evrow.fut{color:var(--muted)}
+.evrow .pp.pup,.why .pts.pup{color:var(--spk)}
+.evrow .pp.pdn,.why .pts.pdn{color:var(--dip)}
+.dotg.fut .core{stroke:var(--spk);stroke-dasharray:3 2.5}
+.dotg.fut.neg .core{stroke:var(--dip)}
+.dotg.fut .halo{fill:var(--spk)}
+.dotg.fut.neg .halo{fill:var(--dip)}
+.fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.fields>div{min-width:0}
+@media (max-width:460px){.fields{grid-template-columns:1fr}}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:4px}
+input{display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;-webkit-appearance:none;appearance:none;font:500 16px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--grid);border-radius:12px;padding:11px 12px;color-scheme:light dark}
+input:focus-visible{outline:2px solid var(--pill);outline-offset:1px;border-color:transparent}
+.lock{margin-top:12px;width:100%;font:700 16px var(--body);color:#fff;background:var(--pill);border:0;border-radius:12px;padding:13px;cursor:pointer}
+.lock:disabled{opacity:.5;cursor:default}
+.note{font-size:13px;color:var(--muted);margin:10px 0 0;min-height:20px}
+.mine{font-weight:600;color:var(--ink)}
+.toprow{display:grid;grid-template-columns:22px 1fr auto;gap:4px 10px;align-items:center;padding:7px 0}
+.toprow .rk{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.toprow .dl{font-weight:600}
+.toprow .who a{color:inherit;text-decoration:none}
+.toprow .who a.me{color:var(--pill);font-weight:600}
+.toprow .sh{font-weight:700;font-variant-numeric:tabular-nums}
+.toprow .bar{grid-column:2 / 4;height:8px;border-radius:99px;background:var(--grid);overflow:hidden}
+.toprow .bar i{display:block;height:100%;background:var(--bar);border-radius:99px;transition:width .6s ease}
+.toprow .who{grid-column:2 / 4;font-size:12px;color:var(--muted);margin-top:-2px}
+.empty{color:var(--muted);padding:12px 0}
+.foot{margin-top:48px;font-size:12px;color:var(--muted);text-align:center}
+@media (prefers-reduced-motion:reduce){
+  .dotg.pop,.dotg.sel .halo{animation:none}.dotg.sel .halo{opacity:.2}
+  .proj,.toprow .bar i{transition:none}
+}
+input[type="date"]{min-height:48px;text-align:left}
+input[type="date"]::-webkit-date-and-time-value{text-align:left}
+input[readonly]{opacity:.75}
+.notyou{font:inherit;font-size:13px;color:var(--pill);background:none;border:0;padding:0;margin-left:6px;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="head">
+    <div class="badge" aria-hidden="true">💍</div>
+    <h1>When will Andre propose?</h1>
+    <div class="brand" aria-hidden="true">Ringshi</div>
+  </div>
+  <p class="sub">Odds of when Andre will propose to Adrienne.</p>
+
+  <div class="big">
+    <div class="num" id="num" aria-live="off">0<sup>%</sup></div>
+    <span class="chance" id="chance">chance</span>
+    <button class="reset" id="reset" hidden>Back to today</button>
+  </div>
+  <div class="delta flat" id="delta" aria-live="polite"></div>
+
+  <div class="chartbox" id="box"><svg id="chart" role="img" aria-label="Line chart of the odds that Andre proposes by Dec 31"></svg></div>
+
+  <div class="pills" role="group" aria-label="Chart range">
+    <button data-r="7" aria-pressed="false">1W</button>
+    <button data-r="30" aria-pressed="false">1M</button>
+    <button data-r="90" aria-pressed="false">3M</button>
+    <button data-r="0" aria-pressed="true">ALL</button>
+  </div>
+
+  <div class="why" id="why" aria-live="polite"></div>
+  <p class="chip">Odds increase on Fridays–Sundays and as end of year approaches. Odds dip Monday–Wednesday (we’re working).</p>
+
+  <h2>What moved the odds</h2>
+  <ul class="evlist" id="evlist"></ul>
+
+  <h2>Predicted next</h2>
+  <ul class="evlist" id="fulist"></ul>
+
+  <h2>Make your guess</h2>
+  <p class="lead">Which day do you think he'll propose?<br>Maybe I will Venmo the winner(s) $5 idk.<br>One guess per person please.</p>
+  <div class="fields">
+    <div><label for="handle">Your IG handle</label><input id="handle" maxlength="31" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="e.g. @paddingtonbear"></div>
+    <div><label for="pdate">Your date</label><input id="pdate" type="date"></div>
+  </div>
+  <button class="lock" id="lock">Lock in my pick</button>
+  <p class="note" id="pnote"></p>
+
+  <h2>Most popular days</h2>
+  <p class="lead" id="pcount">The crowd's top 10.</p>
+  <div id="top"></div>
+
+  <p class="foot">Not a real market. Please don’t tell Andre about this.</p>
+</main>
+
+<script>
+/* ===== EDIT ME: the milestones that move the odds =====
+   Normal event: date, level (the odds right after it happens), ramp (days the jump takes, optional).
+   Spike event: date is the peak day, start/end bracket it, and the odds return to where they
+   were after end. Use level for an absolute peak or add for "this many points above normal".
+   hidden: true keeps an event off the dots and lists (it only shapes the line).
+   lin: true makes the climb a straight line instead of an eased curve.
+   Dates after today show greyed out as predictions. */
+const EVENTS = [
+  {date:'2026-05-29', title:'First ring shopping appointment', level:5,
+   note:'It begins. A small jump, but a big feeling.'},
+  {date:'2026-08-12', title:'Diamond secured', level:10,
+   note:'An old mine cut elongated cushion FYI'},
+  {date:'2026-09-09', title:'CAD finalized and approved', level:18,
+   note:'Got a plastic mold version of our ring'},
+  {date:'2026-10-01', title:'Dre picked up the ring', level:33,
+   note:'He\u2019s never this vague–obviously went to get the ring.'},
+  {date:'2026-10-10', start:'2026-10-09', end:'2026-10-12', title:'Bruno Mars concert with his mom', add:-16,
+   note:'Can\u2019t imagine he would propose to me at a Bruno Mars concert with his mom.'},
+  {date:'2026-10-15', start:'2026-10-14', hold:'2026-11-10', end:'2026-11-11', title:'Nail appointment', add:2,
+   note:'Fresh manicure = odds increase'},
+  {date:'2026-10-17', start:'2026-10-16', hold:'2026-10-18', end:'2026-10-19', when:'Oct 17\u201318', title:'Pregame at Kezar Pub', add:29,
+   note:'The bar he asked me to be his girlfriend at + before we\u2019re going to see our friends at concerts the rest of the day. Possible proposal day before (17th) just us with 18th as celebration.'},
+  {date:'2026-10-31', start:'2026-10-30', end:'2026-11-02', title:'Halloween weekend', add:13,
+   note:'A fun holiday for us. Could be possible.'},
+  {date:'2026-11-13', start:'2026-11-12', hold:'2026-11-15', end:'2026-11-16', dot:'2026-11-14', when:'Nov 13\u201315', title:'Willis and Rachel\u2019s Wedding', add:-20, show:-24,
+   note:'Don\u2019t think he\u2019s dumb enough to propose before / during a wedding we\u2019re attending.'},
+  {date:'2026-11-14', start:'2026-11-13', end:'2026-11-15', title:'Wedding peak dip', add:-4, hidden:true},
+  {date:'2026-11-28', start:'2026-11-26', end:'2026-11-30', when:'Nov 26\u201329', title:'Thanksgiving weekend', add:-21,
+   note:'Weird, food-fueled weekend to propose. Odds take a dip then recover.'},
+  {date:'2026-12-24', start:'2026-12-23', hold:'2026-12-25', end:'2026-12-26', when:'Dec 24\u201325', title:'Christmas Eve + Christmas', add:-6, show:-20,
+   note:'Probably not the vibe'},
+  {date:'2026-12-24', start:'2026-12-23', hold:'2026-12-30', end:'2026-12-31', title:'Post-Christmas hangover', add:-14, hidden:true, nodamp:true},
+  {date:'2026-10-03', title:'Steady climb', level:97, ramp:88, lin:true, hidden:true},
+  {date:'2026-12-30', when:'Dec 31', title:'NYE aka our first date anniversary', level:100, ramp:1, lin:true,
+   note:'Renting out a bar. Makes sense (but would be annoying).'}
+];
+/* ================================================== */
+
+const DAY = 864e5;
+const START = new Date(2026,7,1).getTime();
+const D0 = new Date(START).getDay();
+const END = new Date(2026,11,31,23,59).getTime();
+const NOW = Math.min(Math.max(Date.now(), START + DAY), END);
+const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const noon=s=>{const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12).getTime();};
+const EV = EVENTS.map((e,i)=>({...e, id:i, ms:noon(e.date), ramp:e.ramp||1,
+  spike:!!e.start, st:e.start?noon(e.start):0, en:e.end?noon(e.end):0, hd:e.hold?noon(e.hold):0, dotMs:e.dot?noon(e.dot):0}))
+  .sort((a,b)=>a.ms-b.ms);
+
+/* ---------- odds model ---------- */
+const WK = [4.5,-4.5,-4.5,-4,0,2.6,4.2]; // Sun..Sat: low Mon-Wed, climbing Thu-Sun
+function rnd(n){const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x);}
+function vn(u){const i=Math.floor(u),f=u-i,s=f*f*(3-2*f);return (rnd(i)*(1-s)+rnd(i+1)*s)*2-1;}
+function noise(ms){const u=ms-START;return vn(u/(DAY/3))*1.4+vn(u/(DAY/9)+50)*0.6;}
+function baseLvl(ms){
+  let v=0,prev=0;
+  for(const e of EV){
+    if(e.spike)continue;
+    const k=(ms-e.ms)/(e.ramp*DAY);
+    if(k<=0)break;
+    const c=Math.min(1,k),sm=e.lin?c:c*c*(3-2*c);
+    v=prev+(e.level-prev)*sm;prev=e.level;
+  }
+  return v;
+}
+function spikeW(e,ms){
+  if(ms<=e.st||ms>=e.en)return 0;
+  let k;
+  if(ms<e.ms)k=(ms-e.st)/(e.ms-e.st);
+  else if(!e.hd||ms>=e.hd)k=1-(ms-(e.hd||e.ms))/(e.en-(e.hd||e.ms));
+  else k=1;
+  return k*k*(3-2*k);
+}
+function sw(ms){let m=0;for(const e of EV)if(e.spike&&!e.nodamp&&!(e.add!=null&&Math.abs(e.add)<5))m=Math.max(m,spikeW(e,ms));return m;}
+function lvl(ms){
+  let v=baseLvl(ms);
+  for(const e of EV){ // relative bumps first
+    if(!e.spike||e.add==null)continue;
+    const w=spikeW(e,ms);if(w>0)v+=e.add*w;
+  }
+  for(const e of EV){ // absolute peaks land exactly on their level
+    if(!e.spike||e.add!=null)continue;
+    const w=spikeW(e,ms);if(w>0)v+=(e.level-v)*w;
+  }
+  return v;
+}
+function weekday(ms){
+  const x=(ms-START-DAY/2)/DAY, i=Math.floor(x), f=x-i, s=f*f*(3-2*f);
+  const a=WK[((D0+i)%7+7)%7], b=WK[((D0+i+1)%7+7)%7];
+  return a*(1-s)+b*s;
+}
+function odds(ms,live){
+  const l=lvl(ms);
+  if(l<=0.01)return Math.max(0,Math.min(100,l));
+  if(l>=99.5)return Math.min(100,l);
+  const sc=Math.max(0,Math.min(1,l/25,(100-l)/12));
+  return Math.max(0,Math.min(99.5,l+(weekday(ms)*(1-sw(ms))+noise(ms)*(live?1:0.8))*sc));
+}
+(function(){
+  let prev=0;
+  EV.forEach(e=>{
+    if(e.spike){e.delta=e.show!=null?e.show:Math.round((e.add!=null?e.add:e.level-baseLvl(e.ms)));}
+    else{e.delta=e.level-prev;prev=e.level;}
+    e.future=e.ms>NOW;
+  });
+})();
+const past=[];
+for(let ms=START;ms<NOW;ms+=DAY/4) past.push({ms,v:odds(ms,true)});
+past.push({ms:NOW,v:odds(NOW,true)});
+const proj=[];
+for(let ms=NOW;ms<END;ms+=DAY/4) proj.push({ms,v:odds(ms,false)});
+proj.push({ms:END,v:odds(END,false)});
+// blend the start of the projection into the live line so there is no jump
+const gap=past[past.length-1].v-proj[0].v;
+proj.forEach((p,i)=>{p.v=Math.max(0,Math.min(100,p.v+gap*Math.max(0,1-i/48)));});
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtShort(ms){const d=new Date(ms);return MON[d.getMonth()]+' '+d.getDate();}
+function fmtLong(ms){return new Date(ms).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});}
+function pad(n){return String(n).padStart(2,'0');}
+function iso(ms){const d=new Date(ms);return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function parseIso(s){const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12).getTime();}
+const NS='http://www.w3.org/2000/svg';
+
+/* ---------- chart ---------- */
+let range=0, W=0, H=300, selId=null, animating=false, shown=false;
+const L=4,R=38,T=14,B=26;
+let d0=START,d1=END;
+const svg=$('#chart'), box=$('#box');
+let mainEl, projEl, headDot, headHalo, crossEl, scrubEl, dotsG;
+
+const xOf=ms=>L+(ms-d0)/(d1-d0)*(W-L-R);
+const yOf=v=>T+(1-v/100)*(H-T-B);
+const cur=past[past.length-1].v;
+
+function visiblePast(){return past.filter(p=>p.ms>=d0);}
+function pathOf(a){return a.map((p,i)=>(i?'L':'M')+xOf(p.ms).toFixed(1)+' '+yOf(p.v).toFixed(1)).join('');}
+
+function setNum(v){$('#num').firstChild.nodeValue=String(Math.round(v));}
+function showHeader(){
+  setNum(cur);
+  const d=cur-odds(NOW-DAY,true);
+  const el=$('#delta');
+  el.className='delta '+(Math.abs(d)<0.05?'flat':d>0?'up':'down');
+  el.textContent=(d>0.05?'▲ ':d<-0.05?'▼ ':'')+Math.abs(d).toFixed(1)+' today';
+  $('#chance').textContent='chance';
+}
+
+function layout(){
+  W=Math.max(280,box.clientWidth);
+  H=W<460?300:340;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  svg.setAttribute('height',H);
+  d1=range?NOW:END;
+  d0=range?NOW-range*DAY:START;
+  let h='';
+  [0,25,50,75,100].forEach(v=>{
+    h+='<line class="gridl" x1="'+L+'" x2="'+(W-R)+'" y1="'+yOf(v)+'" y2="'+yOf(v)+'"/>';
+    h+='<text class="ax" x="'+(W-R+6)+'" y="'+(yOf(v)+4)+'">'+v+'%</text>';
+  });
+  // x labels
+  const labels=[];
+  if(!range){for(let m=7;m<12;m++){const ms=new Date(2026,m,1).getTime();labels.push([ms,MON[m]]);}}
+  else{const n=range===7?4:4;for(let i=0;i<n;i++){const ms=d0+(d1-d0)*(i/(n-1)*0.94);labels.push([ms,fmtShort(ms)]);}}
+  labels.forEach(([ms,t])=>{h+='<text class="ax" x="'+xOf(ms)+'" y="'+(H-6)+'">'+t+'</text>';});
+  h+='<path class="proj" id="proj"/><path class="main" id="main"/>';
+  h+='<circle class="head-halo" id="hhalo" r="9"/><circle class="head-dot" id="hdot" r="4.5"/>';
+  h+='<line class="cross" id="cross" y1="'+T+'" y2="'+(H-B)+'"/><circle class="scrubdot" id="scrub" r="5"/>';
+  h+='<g id="dots"></g>';
+  svg.innerHTML=h;
+  mainEl=$('#main');projEl=$('#proj');headDot=$('#hdot');headHalo=$('#hhalo');
+  crossEl=$('#cross');scrubEl=$('#scrub');dotsG=$('#dots');
+  projEl.setAttribute('d',range?'':pathOf(proj));
+  if(shown&&!range)projEl.classList.add('on');
+}
+
+function drawLine(p){
+  const a=visiblePast();
+  const n=Math.max(2,Math.floor(a.length*p));
+  const s=a.slice(0,n);
+  mainEl.setAttribute('d',pathOf(s));
+  const last=s[s.length-1];
+  const x=xOf(last.ms),y=yOf(last.v);
+  headDot.setAttribute('cx',x);headDot.setAttribute('cy',y);
+  headHalo.setAttribute('cx',x);headHalo.setAttribute('cy',y);
+  return last;
+}
+
+function drawDots(popAnim){
+  dotsG.innerHTML='';
+  EV.filter(e=>!e.hidden&&e.ms>=d0&&e.ms<=d1&&(!e.future||!range)).forEach((e,i)=>{
+    const dm=dotMs(e),v=odds(dm,!e.future);
+    const g=document.createElementNS(NS,'g');
+    g.setAttribute('class','dotg'+(e.future?' fut':'')+(e.delta<0?' neg':'')+(e.id===selId?' sel':'')+(popAnim?' pop':''));
+    g.setAttribute('tabindex','0');g.setAttribute('role','button');
+    g.setAttribute('aria-label',e.title+', '+(e.when||fmtShort(e.ms))+', '+(e.delta>0?'+':'')+e.delta+' points'+(e.future?', predicted':''));
+    if(popAnim)g.style.animationDelay=(i*120)+'ms';
+    const cx=xOf(dm),cy=yOf(v);
+    g.innerHTML='<circle class="halo" cx="'+cx+'" cy="'+cy+'" r="12"/><circle class="core" cx="'+cx+'" cy="'+cy+'" r="6"/><circle cx="'+cx+'" cy="'+cy+'" r="16" fill="transparent"/>';
+    g.addEventListener('click',ev=>{ev.stopPropagation();select(e.id);});
+    g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(e.id);}});
+    dotsG.appendChild(g);
+  });
+}
+
+function render(animate){
+  layout();
+  if(animate&&!reduce&&!range){
+    animating=true;shown=false;
+    dotsG.innerHTML='';
+    const t0=performance.now(),dur=2600;
+    (function frame(now){
+      const k=Math.min(1,(now-t0)/dur),p=1-Math.pow(1-k,3);
+      const last=drawLine(p);
+      setNum(last.v);
+      if(k<1){requestAnimationFrame(frame);}
+      else{
+        animating=false;shown=true;showHeader();drawLine(1);
+        projEl.classList.add('on');drawDots(true);applyLock();
+      }
+    })(t0);
+  }else{
+    shown=true;drawLine(1);if(!locked)showHeader();projEl.classList.add('on');drawDots(false);applyLock();
+  }
+}
+
+/* scrub + lock */
+let locked=false,lockMs=0,lockV=null,dragging=false;
+function dotMs(e){return e.spike?(e.dotMs||e.ms):e.ms+e.ramp*DAY;}
+function valueAt(ms){
+  if(ms<=NOW){
+    const i=Math.max(0,Math.min(past.length-1,Math.round((ms-START)/(DAY/4))));
+    return {v:past[i].v,ms:past[i].ms,proj:false};
+  }
+  return {v:odds(ms,false),ms,proj:true};
+}
+function clampMs(ms){return Math.max(d0,Math.min(range?NOW:END,ms));}
+function showAt(ms,vOver){
+  const a=valueAt(clampMs(ms));
+  const x=xOf(a.ms),y=yOf(a.v);
+  crossEl.setAttribute('x1',x);crossEl.setAttribute('x2',x);crossEl.style.opacity=.5;
+  scrubEl.setAttribute('cx',x);scrubEl.setAttribute('cy',y);scrubEl.style.opacity=1;
+  setNum(vOver!=null?vOver:a.v);
+  const el=$('#delta');el.className='delta flat';
+  el.textContent=fmtLong(a.ms)+(a.proj?' (predicted)':'');
+}
+function lockAt(ms,vOver){
+  locked=true;lockMs=clampMs(ms);lockV=vOver;
+  $('#reset').hidden=false;
+  showAt(lockMs,vOver);
+}
+function applyLock(){if(locked)showAt(lockMs,lockV);}
+function unlock(){
+  locked=false;lockMs=0;lockV=null;$('#reset').hidden=true;
+  if(crossEl){crossEl.style.opacity=0;scrubEl.style.opacity=0;}
+  showHeader();
+}
+function msFromEvent(ev){
+  const r=svg.getBoundingClientRect();
+  const px=(ev.clientX-r.left)*(W/r.width);
+  return d0+(px-L)/(W-L-R)*(d1-d0);
+}
+function clearSel(){
+  if(selId===null)return;
+  selId=null;showWhy();drawDots(false);buildList();
+}
+svg.addEventListener('pointerdown',ev=>{
+  if(animating||ev.target.closest('.dotg'))return;
+  dragging=true;
+  try{svg.setPointerCapture(ev.pointerId);}catch(e){}
+  clearSel();
+  lockAt(msFromEvent(ev));
+});
+svg.addEventListener('pointermove',ev=>{
+  if(animating)return;
+  if(dragging){lockAt(msFromEvent(ev));return;}
+  if(!locked&&ev.pointerType==='mouse'&&!ev.target.closest('.dotg'))showAt(msFromEvent(ev));
+});
+function endDrag(ev){
+  if(!dragging)return;
+  dragging=false;
+  try{svg.releasePointerCapture(ev.pointerId);}catch(e){}
+}
+svg.addEventListener('pointerup',endDrag);
+svg.addEventListener('pointercancel',endDrag);
+svg.addEventListener('pointerleave',()=>{
+  if(animating||locked||dragging)return;
+  crossEl.style.opacity=0;scrubEl.style.opacity=0;showHeader();
+});
+$('#reset').addEventListener('click',()=>{unlock();clearSel();});
+
+/* ---------- why card + event list ---------- */
+function sgn(n){return (n>0?'+':'')+n;}
+function showWhy(){
+  const w=$('#why');w.textContent='';
+  const e=EV.find(x=>x.id===selId);
+  if(!e){
+    const p=document.createElement('p');p.className='hint';
+    p.textContent='Tap a dot to see why the odds moved. Tap or drag the chart to check any day.';
+    w.appendChild(p);return;
+  }
+  const m=document.createElement('div');m.className='m';
+  const d=document.createElement('span');d.textContent=e.when||fmtLong(e.ms);
+  const pt=document.createElement('span');pt.className='pts '+(e.future?(e.delta<0?'pdn':'pup'):e.delta<0?'down':'up');pt.textContent=sgn(e.delta)+' points'+(e.future?(e.spike?(e.delta<0?' (predicted dip)':' (predicted spike)'):' (predicted)'):'');
+  m.append(d,pt);
+  const t=document.createElement('p');t.className='t';t.textContent=e.title;
+  w.append(m,t);
+  if(e.note){const n=document.createElement('p');n.textContent=e.note;w.appendChild(n);}
+}
+function select(id){
+  if(selId===id){selId=null;unlock();}
+  else{
+    selId=id;
+    const e=EV.find(x=>x.id===id);
+    const m=dotMs(e);
+    if(range&&(m<d0||m>NOW))setRange(0);
+    lockAt(m,e.spike?null:e.level);
+  }
+  showWhy();drawDots(false);buildList();
+}
+function buildList(){
+  const mk=(ul,arr)=>{
+    ul.textContent='';
+    arr.forEach(e=>{
+      const li=document.createElement('li');
+      const b=document.createElement('button');
+      b.className='evrow'+(e.id===selId?' sel':'')+(e.future?' fut':'');
+      const d=document.createElement('span');d.className='d';d.textContent=e.when||fmtShort(e.ms);
+      const t=document.createElement('span');t.className='tt';t.textContent=e.title;
+      const p=document.createElement('span');p.className='pp '+(e.future?(e.delta<0?'pdn':'pup'):e.delta<0?'down':'up');p.textContent=sgn(e.delta);
+      b.append(d,t,p);
+      b.addEventListener('click',()=>{select(e.id);$('#why').scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});});
+      li.appendChild(b);ul.appendChild(li);
+    });
+  };
+  mk($('#evlist'),EV.filter(e=>!e.hidden&&!e.future).reverse());
+  mk($('#fulist'),EV.filter(e=>!e.hidden&&e.future));
+}
+
+/* ranges */
+function setRange(r){
+  range=r;
+  document.querySelectorAll('.pills button').forEach(x=>x.setAttribute('aria-pressed',String(Number(x.dataset.r)===r)));
+  render(false);
+}
+document.querySelectorAll('.pills button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    if(animating)return;
+    unlock();clearSel();
+    setRange(Number(b.dataset.r));
+  });
+});
+new ResizeObserver(()=>{
+  if(animating||!W)return;
+  if(Math.abs(box.clientWidth-W)>1)render(false);
+}).observe(box);
+
+/* ---------- picks (fake bets) ---------- */
+/* Paste your Google Apps Script web app URL between the quotes. */
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw8z0IaLExAtKacTJkN2CNI44_REW_F6UdaILMZDHWONiKWMYNlH8viJvfXE4h0VkzBDQ/exec';
+
+let picks=[],mine=null,loaded=false;
+try{mine=JSON.parse(localStorage.getItem('ringshi-pick')||'null');}catch(e){}
+const pdate=$('#pdate');
+pdate.min=iso(Date.now());pdate.max='2026-12-31';
+const todayIso=()=>iso(Date.now());
+const isLocked=p=>!!(p&&p.date&&p.date<=todayIso());
+const cleanHandle=h=>String(h||'').trim().replace(/^@+/,'').toLowerCase();
+
+function boardList(){
+  if(SHEET_URL&&loaded)return picks;
+  return mine?[mine]:[];
+}
+function renderPicks(){
+  const list=boardList().filter(p=>p&&p.date&&p.handle);
+  const myH=mine?mine.handle:null;
+  const counts={};
+  list.forEach(p=>{(counts[p.date]=counts[p.date]||[]).push({handle:p.handle,me:p.handle===myH});});
+  const rows=Object.entries(counts).map(([date,who])=>({date,who:who.sort((a,b)=>b.me-a.me),n:who.length}))
+    .sort((a,b)=>b.n-a.n||a.date.localeCompare(b.date)).slice(0,10);
+  const total=list.length;
+  $('#pcount').textContent=total?(total+(total===1?' person has':' people have')+' picked a day.'):'The crowd\'s top 10.';
+  const top=$('#top');top.textContent='';
+  if(!rows.length){
+    const d=document.createElement('div');d.className='empty';
+    d.textContent=(SHEET_URL&&!loaded)?'Loading guesses\u2026':'No picks yet. Be the first to call it.';
+    top.appendChild(d);
+  }
+  const max=rows.length?rows[0].n:1;
+  rows.forEach((r,i)=>{
+    const row=document.createElement('div');row.className='toprow';
+    const rk=document.createElement('span');rk.className='rk';rk.textContent=String(i+1);
+    const dl=document.createElement('span');dl.className='dl';dl.textContent=fmtLong(parseIso(r.date));
+    const sh=document.createElement('span');sh.className='sh';sh.textContent=Math.round(r.n/total*100)+'%';
+    const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('i');fill.style.width=(r.n/max*100)+'%';bar.appendChild(fill);
+    const who=document.createElement('div');who.className='who';
+    r.who.slice(0,4).forEach((w,k)=>{
+      if(k)who.append(', ');
+      const n=document.createElement('a');
+      n.href='https://instagram.com/'+encodeURIComponent(w.handle);n.target='_blank';n.rel='noopener';
+      if(w.me)n.className='me';
+      n.textContent='@'+w.handle;who.appendChild(n);
+    });
+    if(r.who.length>4)who.append(' and '+(r.who.length-4)+' more');
+    row.append(rk,dl,sh,bar,who);top.appendChild(row);
+  });
+  const locked=isLocked(mine),btn=$('#lock');
+  btn.textContent=locked?'Pick locked in':mine?'Change my pick':'Lock in my pick';
+  btn.disabled=locked;pdate.readOnly=locked;
+  const hIn=$('#handle');
+  if(mine){
+    if(!pdate.value||locked)pdate.value=mine.date;
+    hIn.value='@'+mine.handle;hIn.readOnly=true;
+  }else{hIn.readOnly=false;}
+  const note=$('#pnote');
+  if(mine&&!note.dataset.msg){
+    note.textContent='';
+    const s=document.createElement('span');s.className='mine';s.textContent='Your pick: '+fmtLong(parseIso(mine.date))+'.';
+    note.append(s,locked?(mine.date===todayIso()?' That\u2019s today, so your pick is locked in.':' That day has passed, so your pick is locked in.'):' One pick per handle, so picking again just changes your date.');
+    const b=document.createElement('button');b.className='notyou';b.type='button';b.textContent='Not @'+mine.handle+'?';
+    b.addEventListener('click',()=>{mine=null;try{localStorage.removeItem('ringshi-pick');}catch(e){}hIn.value='';pdate.value='';note.textContent='';delete note.dataset.msg;renderPicks();hIn.focus();});
+    note.append(b);
+  }
+}
+async function loadPicks(){
+  if(!SHEET_URL){renderPicks();return;}
+  try{
+    const r=await fetch(SHEET_URL);const j=await r.json();
+    picks=Array.isArray(j.picks)?j.picks:[];loaded=true;
+    if(mine){const p=picks.find(x=>x.handle===mine.handle);if(p){mine=p;try{localStorage.setItem('ringshi-pick',JSON.stringify(p));}catch(e){}}}
+  }catch(e){}
+  renderPicks();
+}
+async function lockIn(){
+  const note=$('#pnote');note.dataset.msg='1';
+  const date=pdate.value,handle=cleanHandle($('#handle').value);
+  if(!/^[a-z0-9._]{1,30}$/.test(handle)){note.textContent='Add your IG handle (letters, numbers, dots and underscores).';return;}
+  if(isLocked(mine)&&mine.handle===handle){note.textContent='Your pick\u2019s day has already come, so it can\u2019t be changed.';return;}
+  if(!date||date<todayIso()||date>pdate.max){note.textContent='Pick a date between today and Dec 31.';return;}
+  if(mine&&mine.handle!==handle){note.textContent='This device already picked as @'+mine.handle+'. Change your date instead.';return;}
+  const pick={handle,date};
+  const btn=$('#lock');btn.disabled=true;
+  if(SHEET_URL){
+    try{
+      const r=await fetch(SHEET_URL,{method:'POST',body:JSON.stringify(pick)});
+      const j=await r.json();
+      if(!j.ok){
+        if(j.error==='locked'){note.textContent='That handle\u2019s pick has already passed, so it can\u2019t be changed.';btn.disabled=false;return;}
+        if(j.error==='past'){note.textContent='Pick a date between today and Dec 31.';btn.disabled=false;return;}
+        throw new Error(j.error||'failed');
+      }
+      picks=j.picks||picks;loaded=true;
+      note.textContent=(j.updated?'Updated: ':'Locked in: ')+fmtLong(parseIso(date))+'. Good luck.';
+    }catch(e){
+      note.textContent='That didn\u2019t save. Check your connection and try again.';
+      btn.disabled=false;return;
+    }
+  }else{
+    note.textContent='Saved on this device only (the shared board isn\u2019t connected yet).';
+  }
+  mine=pick;
+  try{localStorage.setItem('ringshi-pick',JSON.stringify(pick));}catch(e){}
+  btn.disabled=false;
+  renderPicks();
+}
+$('#lock').addEventListener('click',lockIn);
+
+/* ---------- go ---------- */
+showWhy();buildList();renderPicks();
+render(true);
+loadPicks();
+</script>
+</body>
+</html>
